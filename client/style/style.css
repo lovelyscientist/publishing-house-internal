@@ -1,0 +1,220 @@
+body{
+	background: url("http://imgh.us/tr_2.svg");
+}
+.wrapper{
+	padding: 0 10px;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 20px;
+}
+.headerMenu{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 20px 0;
+}
+.menus{
+	vertical-align: middle;
+}
+.tip{
+	display: inline-block;
+	width: 30%;
+	font-size: 22px;
+	font-family: 'Indie Flower', cursive;
+	margin-top: 7px;
+	cursor: pointer;
+	font-weight: 600;
+}
+.circle_p{
+	background-color: #443366;
+	color: white;
+	border: 3px solid #acd2cd;
+	border-radius: 20px;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	font-family: "Tahoma";
+	padding-top: 5px;
+}
+.circle_p:hover{
+	background-color: white;
+	color: #443366;
+	border: 2px solid  #443366;
+}
+.tip_text{
+	display: inline-block;
+	color: #443366;
+	min-width: 170px;
+	text-align: center;
+}
+.main{
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 1%;
+	padding: 5px;
+	text-align: center;
+	padding-bottom: 10px;
+	height: 550px;
+	border-radius: 15px;
+}
+.inputArea{
+	margin: 5px;
+	width: 100%;
+	text-align: center;
+}
+input{
+	width: 70%;
+	line-height: 2.5;
+}
+.list{
+	text-align:center;
+}
+.todo{
+	font-family: 'Verdana';
+	text-align: center;
+	padding: 3px;
+}
+.todoText{
+	display: inline-block;
+	width: 50%;
+}
+.modal-backdrop.am-fade {
+  opacity: .5;
+  transition: opacity .15s linear;
+  &.ng-enter {
+    opacity: 0;
+    &.ng-enter-active {
+      opacity: .5;
+    }
+  }
+  &.ng-leave {
+    opacity: .5;
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}
+.modal.center .modal-dialog {
+    position:fixed;
+    top:40%;
+    left:50%;
+    min-width:320px;
+    max-width:630px;
+    width:80%;
+    height: 90%;
+    -webkit-transform:translateX(-50%) translateY(-50%);
+    transform:translateX(-50%) translateY(-50%)
+}
+.add-transaction-form{
+	margin-right: 5px;
+	padding-right: 5px;
+	display: inline-block;
+	font-family: 'Indie Flower', cursive;
+	font-size: 20px;
+}
+
+.form-horizontal input, p, label, select, h1, h2, h3, h4{
+	font-size: 20px;
+	font-weight: 400;
+	font-family: 'Indie Flower', cursive;
+	text-align: left;
+}
+
+.form-horizontal label{
+	font-weight: 500;
+}
+
+
+.form-horizontal h1{
+	font-size: 30px;
+	font-weight: 600;
+	color: #5DC5B8;
+}
+
+.form-horizontal h3{
+	font-size: 22px;
+	font-weight: 600;
+	color:  #443366;
+}
+
+.form-horizontal button{
+	text-align: center;
+}
+
+.myFormBtn{
+	background-color: #443366;
+	color:  #acd2cd;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	font-family: 'Indie Flower', cursive;
+	border-radius: 5px;
+	height: 34px;
+	padding-top: 5px;
+	cursor: pointer;
+	border: 1px solid #acd2cd;
+	width: 80px;
+} 
+.myFormBtn:hover{
+	background-color: #695b84;
+	color:  #acd2cd;
+	border: 1px solid  #443366;
+} 
+.form-horizontal input.ng-invalid {
+    background-color:red;
+}
+.form-horizontal input.ng-valid {
+    background-color:#acd2cd;
+}
+.form-horizontal input.ng-pristine {
+    background-color: white;
+}
+.contextMenu {
+    position: fixed;
+    top: 0;
+    left: -180px;
+    transition: .4s;
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    width: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contextMenu.open {
+    transition: 0.4s;
+    left: 0;
+    z-index: 4;
+    color: black;
+    background-color:  grey; 
+}
+
+.contextMenu button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: -150px;
+    margin-left: 60%;
+}
+
+.contextMenu button:hover {
+    color: white;
+}
+.profile-container{
+    margin-top: -50px;
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+}
+
+.profile-container hr{
+    border-color: black;
+}

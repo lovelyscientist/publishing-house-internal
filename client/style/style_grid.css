@@ -1,0 +1,80 @@
+.hidtable {
+    cursor:move;
+    border-style:dotted;
+}
+.coverhidtable {
+    cursor:move;
+    color:white;
+}
+.acttable {
+    cursor:move;
+}
+.acttable th{
+  padding:10px;
+ 
+}
+.drag {
+    background: #443366;
+    color:white;
+    cursor:move;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+.drag a{
+    color:white;
+}
+.over {
+    background: red;
+    color:white;
+
+}
+ .sortorder:after {
+    content: '\25b2';
+  }
+  .sortorder.reverse:after {
+    content: '\25bc';
+  }
+
+.grid{
+    font-size: 22px;
+    font-weight: 100;
+    font-family: 'Indie Flower', cursive;
+}
+.next-prev a{
+    font-size: 25px;
+    font-weight: 100;
+    color: #443366;
+}
+
+.next-prev{
+    color: #443366;
+}
+.mytable{
+    border-radius: 10px;
+}
+.pagination{
+    font-size: 22px;
+    font-weight: 100;
+    font-family: 'Indie Flower', cursive;
+    text-align: left;
+    width: 100%;
+    vertical-align: bottom;
+}
+.pagination-title{
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+}
+.pagination-links{
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+}
+.pagination a:disabled {
+  color: #FF85A1;
+}
+.main-grid{
+    height: 550px;
+}

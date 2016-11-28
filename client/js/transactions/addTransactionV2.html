@@ -1,0 +1,59 @@
+<ion-modal-view style="height: 60%; width: 60%; margin: auto; padding: 15px; font-size: 20px; font-weight: 500; border-radius: 10px;">
+	<div class="spacer"></div>
+	<div class="add-transaction-form">
+		 <form class="form-horizontal" name="add-transaction-form" novalidate>
+		 		<h1>Add Task</h1>
+				<h3>Please, add your expense here</h3>
+
+				<div class="form-group">
+			    <label class="col-sm-5 control-label ">Task Name</label>
+			    <div class="col-sm-7">
+			      <input class="form-control" placeholder="Please, enter name" ng-model="currentTransaction.amount" required name="amount"></input>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label class="col-sm-6 control-label" required name="type">Publication  </label>
+			    <div class="col-sm-6">
+			      	 <select class="selectpicker" ng-model="currentTransaction.type">
+						  <option>Happy three friends</option>
+						  <option>One day</option>
+						  <option>One night</option>
+					 </select>
+			    </div>
+			  </div>
+		
+			  <div class="form-group">
+			    <label class="col-sm-7 control-label ">Estimated time</label>
+			    <div class="col-sm-5">
+			      <input class="form-control" placeholder="00h 00m" ng-model="currentTransaction.amount" required name="amount"></input>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label class="col-sm-7 control-label ">Remaining time</label>
+			    <div class="col-sm-5">
+			      <input class="form-control" placeholder="00h 00m" ng-model="currentTransaction.amount" required name="amount"></input>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label style="margin-left: -40px;" class="col-sm-6 control-label" required name="type">Assignee  </label>
+			    <div class="col-sm-5">
+			      	 <select class="selectpicker" ng-model="currentTransaction.type">
+						  <option>Vlad Sazonov</option>
+						  <option>Illya Tyshchenko</option>
+						  <option>John Doe</option>
+					 </select>
+			    </div>
+			  </div>
+
+			  <div class="form-group" >
+			  		<label  class="col-sm-3 control-label"> </label>
+				  <div  class="myFormBtn  col-sm-3" ng-click="addTransaction();$hide()"> Save </div>
+				  <label  class="col-sm-1 control-label"> </label>
+				  <div  class="myFormBtn col-sm-3" ng-click="$hide()"> Cancel </div>
+			  </div>
+		</form>
+	</div>
+</ion-modal-view>
