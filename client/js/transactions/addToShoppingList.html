@@ -1,20 +1,17 @@
 <div class="main_todo">
-    <h3><strong>Hello! Add all you need to shopping list here: </strong></h3>
-    <div class="todoContainer" ng-app="listApp" ng-controller="ListController" ng-init="initDragula()">
+    <h3><strong> Hello! Add all you need to shopping list here: </strong></h3>
+    <div class="todoContainer" ng-app="app" ng-controller="ListController" ng-init="initDragula">
         <div class="inputArea">
              <input style="width: 50%; display: inline-block;" type="text" autofocus="autofocus" ng-model="lastTodo" ng-focus="clearInput()" ng-keyup="onEnter($event)" placeholder="Enter todo">
              <div style="display: inline-block;" type="button" class="btn btn-primary myFormBtn" ng-click="addItem(lastTodo)">Add</button>
         </div>
-        <div class="listArea">
-            <div class="list" ng-repeat="todo in todos">
-             <div class="todo"></div>
-             <todo-item></todo-item>
-            <div>
+        <div>
+            <div class="leftEl" style="width: 40%; height: 100%; background-color:green; display: inline-block;">Text 1
+                <div class="list" ng-repeat="todo in todos">
+                    <todo-item></todo-item>
+                </div>
+            </div>
+             <div class="rightEl" style="width: 40%; height: 100%; background-color:blue; display: inline-block;">Text 2</div>
         </div>
-        <div id="left" style="width: 200px; height: 200px; background-color:green">Text 1
-            <div style="width: 20px; height: 20px; background-color:red">el1</div>
-            <div style="width: 20px; height: 20px; background-color:orange">el2</div>
-        </div>
-        <div id="right" style="width: 200px; height: 200px; background-color:blue">Text 2</div>
     </div>
 </div>

@@ -4,7 +4,7 @@ angular
 		$stateProvider
 		    .state('dashboard', {
 		      url: '/dashboard',
-		      templateUrl: 'js/transactions/addToShoppingList.html'
+		      template: '<dashboard></dashboard>'
 			})
 			.state('list-transactions', {
 		      url: '/list-transactions',

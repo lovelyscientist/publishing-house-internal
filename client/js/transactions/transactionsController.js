@@ -1,18 +1,22 @@
-angular
-    .module('app')
-    .controller('ListController', ListController);
+function Dashboard($injector) {
+    return {
+        restrict: 'E',
+        templateUrl: 'js/transactions/addToShoppingList.html',
+        controller: ListController,
+        link($scope, element, attr, ctrl) {
+           dragula([$('.leftEl')[0], $('.rightEl')[0]])
+           .on('drag', function (el) {
+                console.log(el);
+            })
+        }
+    };
+}
 
-ListController.$inject = ['$scope', '$modal', '$ionicModal', '$filter', 'transactionsStore'];
+ListController.$inject = ['$scope', '$modal', '$ionicModal', '$filter'];
 
-function ListController ($scope, $modal,$ionicModal, $filter, transactionsStore) {
+function ListController ($scope, $modal,$ionicModal, $filter) {
   $scope.todos = [{text: 'make todo on angular', number: 1}];
   $scope.lastTodo='';
-
-  $scope.initDragula = function () {
-      dragula([document.getElementById('#left'), document.getElementById('#right')]);
-      console.log(document.getElementById('#left'));
-  };
-
   $scope.addItem = function (item) {
       $scope.todos.push({text: item, number: $scope.todos.length + 1});
       $scope.clearInput();
@@ -48,6 +52,9 @@ function ListController ($scope, $modal,$ionicModal, $filter, transactionsStore)
 
   $scope.addTransaction = function () {
       $scope.currentTransaction.amount = parseFloat($scope.currentTransaction.amount);
-      transactionsStore.transactions.push($scope.currentTransaction);
   }
 }
+
+angular
+    .module('app')
+    .directive('dashboard', Dashboard);
