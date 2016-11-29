@@ -4,9 +4,9 @@ function Dashboard($injector) {
         templateUrl: 'js/transactions/addToShoppingList.html',
         controller: ListController,
         link($scope, element, attr, ctrl) {
-           dragula([$('.leftEl')[0], $('.rightEl')[0]])
+           dragula([$('.to-do')[0], $('.in-progress')[0], $('.done')[0]])
            .on('drag', function (el) {
-                console.log(el);
+                 console.log($(el));
             })
         }
     };

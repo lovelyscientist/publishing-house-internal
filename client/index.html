@@ -3,7 +3,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+         <script src="js/lib/jquery-2.2.1.js"></script> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
         <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
@@ -19,23 +21,30 @@
         <div id="left-menu" class="left-menu"></div>
             <div class="headerMenu">
                 <div class="menus">
-                    <div class="tip">
-                       <div class="tip_text"  ui-sref="dashboard"> Dashboards </div>
-                    </div>
-                    <div class="tip">
-                       <div class="tip_text" ng-click="showModal()"> Meetings </div>
-                    </div>
-                    <div class="tip">
-                       <div class="tip_text" ui-sref="list-transactions"> Rules </div>
-                    </div>
+                  <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" class="btn btn-default" ui-sref="dashboard"> Dashboards </button>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Tasks
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Create task</a></li>
+                      <li><a href="#">Filter</a></li>
+                    </ul>
+                  </div>
+                  <button type="button" class="btn btn-default" ui-sref="publications">Publications</button>
+                  <button type="button" class="btn btn-default">Meetings</button>
+                   <button type="button" class="btn btn-default">Rules</button>
+                </div>
                 </div>
             </div>
-            <div class="main">
-               <dashboard></dashboard>
+            <div class="main">  
+               <ui-view>
             </div>
         </div>
 
-        <script src="js/lib/jquery-2.2.1.js"></script> 
+    
         <script src="js/lib/underscore-1.8.3.js"></script> 
         <script src="js/bower_components/dragula.js/dist/dragula.js"></script>
         <script src="js/UserView.js"></script>
