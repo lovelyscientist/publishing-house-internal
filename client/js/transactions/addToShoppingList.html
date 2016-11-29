@@ -1,7 +1,10 @@
 <div class="main_todo">
     <div class="todoContainer" ng-app="app" ng-controller="ListController" ng-init="initDragula">
+        <div class="checkbox">
+            <label><input styles="width: 5px;"type="checkbox" value=""> Only my tasks </label>
+        </div>
         <div class="inputArea">
-             <input style="width: 50%; display: inline-block;" type="text" autofocus="autofocus" ng-model="lastTodo" ng-focus="clearInput()" ng-keyup="onEnter($event)" placeholder="Enter todo">
+             <input style="width: 50%; display: inline-block;" class="filter-input" type="text" autofocus="autofocus" ng-model="lastTodo" ng-focus="clearInput()" ng-keyup="onEnter($event)" placeholder="Enter todo">
              <div style="display: inline-block;" type="button" class="btn btn-primary myFormBtn" ng-click="addItem(lastTodo)">Filter</button>
         </div>
         <div class="panels">

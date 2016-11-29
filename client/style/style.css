@@ -68,7 +68,7 @@ body{
 	width: 100%;
 	text-align: center;
 }
-input{
+.filer-input{
 	width: 70%;
 	line-height: 2.5;
 }
