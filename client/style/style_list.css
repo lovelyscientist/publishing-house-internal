@@ -27,20 +27,20 @@
 }
 .todo{
 	font-family: 'Indie Flower', cursive;
-	text-align: center;
 	width: 90%;
 	height: 200px;
 	border: 1px solid #443366;
 	border-left: 4px solid #443366;
 	cursor: -webkit-grab;
 	margin: 10px auto 10px auto;
-    padding: 10px;
+    padding: 5px;
     background-color: white;
     transition: opacity 0.4s ease-in-out;
 }
 .todoText{
-	display: inline-block;
-	width: 50%;
+	font-family: 'Indie Flower', cursive;
+	font-size: 22px;
+	text-align: left;
 }
 .todoContainer{
 	text-align: center;

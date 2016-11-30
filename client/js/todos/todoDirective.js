@@ -1,5 +1,5 @@
 angular
-	.module('listApp')
+	.module('app')
 	.directive('todoItem', todoItem);
 
 function todoItem () {

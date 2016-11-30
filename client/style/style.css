@@ -1,6 +1,68 @@
 body{
 	background-color: #ae3270;
 }
+.task-id{
+	background-color: #443366;
+	color: white;
+	font-weight: bold;
+	margin: 5px 0 5px 0;
+	padding: 2px;
+}
+.super-buttons{
+	font-family: 'Indie Flower';
+	font-size: 22px;
+	background: transparent; 
+	border: none;
+	color: white;
+}
+.super-buttons-not{
+	font-family: 'Indie Flower';
+	font-size: 22px;
+	background: transparent; 
+	border: none;
+	color: white;
+}
+.logo{
+	margin-left: 30px;
+	margin-top: -7px;
+	background-color: red;
+	width: 35px;
+	height: 42px;
+	display: inline-block;
+	float: left;
+	background: url("../style/r.png");
+	background-size: cover;
+}
+.logo-desc{
+	display: inline-block;
+    font-family: 'Indie Flower';
+    font-size: 22px;
+    color: black;
+    font-weight: 800px;
+    float: left;
+    font-style: bold !important;
+    margin-top: 9px;
+    font-weight: bold;
+    margin: 5px;
+    margin-top: 9px;
+}
+.super-buttons:hover{
+	background: transparent; 
+	border: none;
+	color: white;
+	transform: scale(1.5);
+	padding: 0 30px 0 30px;
+}
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default, .btn-default.focus, .btn-default:focus {
+	background: transparent !important; 
+	border: none !important;
+	color: white !important;
+	font-family: 'Indie Flower';
+	font-size: 22px;
+}
+.btn:focus, .btn:focus:active {
+  outline: none;
+}
 .wrapper{
 	padding: 5px 0;
     height: 80%;
@@ -14,6 +76,7 @@ body{
 	text-align: center;
 	vertical-align: middle;
 	border-bottom: 1px solid white;
+	margin-top: 5px;
 }
 .menus{
 	vertical-align: middle;
@@ -22,10 +85,17 @@ body{
 	display: inline-block;
 	width: 30%;
 	font-size: 22px;
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Indie Flower';
 	margin-top: 7px;
 	cursor: pointer;
 	font-weight: 600;
+}
+span{
+	font-size: 22px;
+	font-family: 'Indie Flower', cursive;
+	margin: 10px;
+	font-weight: 600;
+	color: white;
 }
 .circle_p{
 	background-color: #443366;
@@ -52,8 +122,6 @@ body{
 .main{
 	width: 100%;
 	margin: 0 auto;
-	margin-top: 1%;
-	padding: 5px;
 	text-align: center;
 	padding-bottom: 10px;
 	height: 800px;
@@ -61,7 +129,7 @@ body{
 }
 .panels{
 	overflow:scroll;
-	height: 550px;	
+	height: 490px;	
 }
 .inputArea{
 	margin: 5px;
@@ -74,15 +142,6 @@ body{
 }
 .list{
 	text-align:center;
-}
-.todo{
-	font-family: 'Verdana';
-	text-align: center;
-	padding: 3px;
-}
-.todoText{
-	display: inline-block;
-	width: 50%;
 }
 .modal-backdrop.am-fade {
   opacity: .5;
@@ -155,11 +214,11 @@ body{
     font-weight: 600;
     font-family: 'Indie Flower', cursive;
     border-radius: 5px;
-    height: 34px;
-    padding-top: 2px;
+    height: 40px;
+    padding-top: 6px;
     cursor: pointer;
     border: 3px solid white;
-    width: 80px;
+    width: 98px;
 } 
 .myFormBtn:hover{
 	background-color: #e588b6;
@@ -223,7 +282,7 @@ body{
 }
 .to-do, .in-progress, .done{
 	vertical-align: top;
-	height: 800px;
+	min-height: 240px;
 	width: 32%; 
 	background-color: #e588b6;
 	display: inline-block;

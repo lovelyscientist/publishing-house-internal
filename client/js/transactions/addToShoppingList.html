@@ -1,7 +1,8 @@
 <div class="main_todo">
-    <div class="todoContainer" ng-app="app" ng-controller="ListController" ng-init="initDragula">
+    <div class="todoContainer">
         <div class="checkbox">
-            <label><input styles="width: 5px;"type="checkbox" value=""> Only my tasks </label>
+            <label><input styles="width: 5px;" type="checkbox" value=""></label>
+            <span> Only my tasks</span>
         </div>
         <div class="inputArea">
              <input style="width: 50%; display: inline-block;" class="filter-input" type="text" autofocus="autofocus" ng-model="lastTodo" ng-focus="clearInput()" ng-keyup="onEnter($event)" placeholder="Enter todo">
@@ -9,11 +10,13 @@
         </div>
         <div class="panels">
             <div class="to-do" > To Do
-                 <div class="list" ng-repeat-start="todo in todos" ng-if="false"></div>
+                 <div class="list" ng-repeat-start="todo in ctrl.taskService.todos" ng-if="false"></div>
                     <todo-item></todo-item>
                  <div ng-repeat-end ng-if="false"></div>
             </div>
-             <div class="in-progress"> In Progress </div>
+             <div class="in-progress"> In Progress
+                
+              </div>
              <div class="done"> Done </div>
         </div>
     </div>

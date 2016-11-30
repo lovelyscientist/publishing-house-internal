@@ -14,28 +14,36 @@
          <link rel="stylesheet" href="style/style_grid.css">
          <link rel="stylesheet" href="style/style.css">
          <link rel="stylesheet" href="js/bower_components/dragula.js/dist/dragula.css">
-        <title>Check your budget</title>
+        <title> Best publishing house </title>
         </head>
-        <body ng-controller="ListController">
+        <body ng-controller="TaskController">
         <div class="wrapper">
         <div id="left-menu" class="left-menu"></div>
             <div class="headerMenu">
                 <div class="menus">
+                <div class="logo"></div><div class="logo-desc">Raspberry Publishing Inc.</div>
                   <div class="btn-group" role="group" aria-label="...">
-                  <button type="button" class="btn btn-default" ui-sref="dashboard"> Dashboards </button>
+                  <button type="button" class="btn btn-default super-buttons" ui-sref="dashboard"> Dashboards </button>
                   <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-default dropdown-toggle super-buttons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Tasks
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Create task</a></li>
-                      <li><a href="#">Filter</a></li>
+                      <li><a href="#" class="super-buttons-not" ng-click="showModal()">Create task</a></li>
                     </ul>
                   </div>
-                  <button type="button" class="btn btn-default" ui-sref="publications">Publications</button>
-                  <button type="button" class="btn btn-default">Meetings</button>
-                   <button type="button" class="btn btn-default">Rules</button>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle super-buttons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Publications
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#" class="super-buttons-not" ng-click="showModal()">Create publication</a></li>
+                    </ul>
+                  </div>
+                  <button type="button" class="btn btn-default super-buttons">Meetings</button>
+                   <button type="button" class="btn btn-default super-buttons">Rules</button>
                 </div>
                 </div>
             </div>
@@ -53,15 +61,9 @@
         <script src="js/bower_components/angular-strap/dist/angular-strap.js"></script>
         <script src="js/bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
         <script src="js/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="js/grid/Module.js"></script>
-        <script src="js/grid/GridController.js"></script>
-        <script src="js/grid/components/droppableDirective/droppableDirective.js"></script>
-        <script src="js/grid/components/draggableDirective/draggableDirective.js"></script>
-        <script src="js/grid/components/gridDirective/gridDirective.js"></script>
-        <script src="js/todos/todoModule.js"></script>
+        <script src="js/transactions/transactionsModule.js"></script>
         <script src="js/todos/todoController.js"></script>
         <script src="js/todos/todoDirective.js"></script>
-        <script src="js/transactions/transactionsModule.js"></script>
         <script src="js/transactions/transactionsService.js"></script>
         <script src="js/transactions/transactionsController.js"></script>
         <script src="js/transactions/config.js"></script>

@@ -1,8 +1,10 @@
 <div id="{{todo.id}}" class="todo" ui-sref="task({id: todo.id})">
 	<div class="todoText">
-	{{todo.name}} <br>
-	{{todo.assignee}} <br>
-	{{todo.remaining}} <br>
+	<div class="task-id">{{todo.id}}</div>
+	<div class="task-assignee"><u>{{todo.assignee}}</u></div>
+	<div class="task-name">{{todo.name}}</div>
+	<div class="task-pub">{{todo.publication}} </div>
+	<span style="font-weight: bold; color: black; margin: 0; padding: 0;">Remaining:</span> {{todo.remaining}} <br>
+	<span style="font-weight: bold; color: black; margin: 0; padding: 0;">Estimated:</span> {{todo.estimated}} <br>
 	</div>
-	<button ng-click="remove(todo)" type="button" class="myBtn">x</button>
 </div>

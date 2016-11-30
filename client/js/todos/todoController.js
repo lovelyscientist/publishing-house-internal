@@ -1,13 +1,37 @@
 angular
-    .module('listApp')
-    .controller('ListController', ListController);
+    .module('app')
+    .controller('TaskController', TaskController);
 
-ListController.$inject = ['$scope'];
+TaskController.$inject = ['$scope', '$modal', '$ionicModal', 'taskService'];
 
-function ListController ($scope) {
-  $scope.todos = [
-      {id: 1, assignee: 'Vlad Sazonov', name: 'Create love story for two of us', remaining: '50m'},
-      {id: 2, assignee: 'Anastasuz Cherkashenko', name: 'Make us go for a walk', remaining: '5h50m'},
-      {id: 3, assignee: 'Svitlana Tyshchenko', name: 'Is the best mom ever', remaining: '0m'}
-    ];
+function TaskController ($scope, $modal, $ionicModal, taskService) {
+  this.taskService = taskService;
+  $scope.taskService = taskService;
+
+    $scope.currentTask = {
+      name: '',
+      estimated: '',
+      remaining: '',
+      assignee: '',
+      publication: ''
+    };
+
+  $scope.addTask = function () {
+      this.taskService.addTask($scope.currentTask);
+      $scope.currentTask = {
+        name: '',
+        estimated: '',
+        remaining: '',
+        assignee: '',
+        publication: ''
+      };
+  }
+
+  $scope.addTask = $scope.addTask.bind(this);
+
+  var myModal = $modal({title: "Title", templateUrl: "js/transactions/addTransactionV2.html", placement: 'center', show: false, backdrop: 'static', controller: 'TaskController', $scope: $scope});
+
+  $scope.showModal = function() {
+        myModal.show();
+  };
 }

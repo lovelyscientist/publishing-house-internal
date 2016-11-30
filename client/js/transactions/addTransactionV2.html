@@ -1,56 +1,52 @@
-<ion-modal-view style="height: 60%; width: 60%; margin: auto; padding: 15px; font-size: 20px; font-weight: 500; border-radius: 10px;">
+<ion-modal-view style="height: 70%; width: 50%; margin: auto; padding: 15px; font-size: 20px; font-weight: 500; border-radius: 10px;">
 	<div class="spacer"></div>
 	<div class="add-transaction-form">
-		 <form class="form-horizontal" name="add-transaction-form" novalidate>
+		 <form class="form-horizontal" name="add-transaction-form">
 		 		<h1>Add Task</h1>
 				<h3>Please, add your expense here</h3>
 
 				<div class="form-group">
 			    <label class="col-sm-5 control-label ">Task Name</label>
 			    <div class="col-sm-7">
-			      <input class="form-control" placeholder="Please, enter name" ng-model="currentTransaction.amount" required name="amount"></input>
+			      <input class="form-control" placeholder="Task name" ng-model="currentTask.name" required name="amount"></input>
 			    </div>
 			  </div>
 
 			  <div class="form-group">
-			    <label class="col-sm-6 control-label" required name="type">Publication  </label>
+			    <label class="col-sm-5 control-label" required name="type"> Publication  </label>
 			    <div class="col-sm-6">
-			      	 <select class="selectpicker" ng-model="currentTransaction.type">
-						  <option>Happy three friends</option>
-						  <option>One day</option>
-						  <option>One night</option>
+			      	 <select class="selectpicker" ng-model="currentTask.publication">
+			      	 	 <option ng-repeat="p in taskService.publications" value="{{p.id + ' ' + p.title}}">{{p.id + ' ' + p.title}}</option>
 					 </select>
 			    </div>
 			  </div>
 		
 			  <div class="form-group">
-			    <label class="col-sm-7 control-label ">Estimated time</label>
+			    <label class="col-sm-5 control-label ">Estimated time (in days)</label>
 			    <div class="col-sm-5">
-			      <input class="form-control" placeholder="00h 00m" ng-model="currentTransaction.amount" required name="amount"></input>
+			      <input class="form-control" placeholder="0" ng-model="currentTask.estimated" required name="amount"></input>
 			    </div>
 			  </div>
 
 			  <div class="form-group">
-			    <label class="col-sm-7 control-label ">Remaining time</label>
+			    <label class="col-sm-5 control-label ">Remaining time (in days)</label>
 			    <div class="col-sm-5">
-			      <input class="form-control" placeholder="00h 00m" ng-model="currentTransaction.amount" required name="amount"></input>
+			      <input class="form-control" placeholder="0" ng-model="currentTask.remaining" required name="amount"></input>
 			    </div>
 			  </div>
 			  
 			  <div class="form-group">
-			    <label style="margin-left: -40px;" class="col-sm-6 control-label" required name="type">Assignee  </label>
-			    <div class="col-sm-5">
-			      	 <select class="selectpicker" ng-model="currentTransaction.type">
-						  <option>Vlad Sazonov</option>
-						  <option>Illya Tyshchenko</option>
-						  <option>John Doe</option>
+			    <label class="col-sm-5 control-label"  required name="type">Assignee  </label>
+			    <div class="col-sm-6">
+			      	 <select class="selectpicker" ng-model="currentTask.assignee">
+			      	 	 <option ng-repeat="user in taskService.users" value="{{user.name}}">{{user.name}}</option>
 					 </select>
 			    </div>
 			  </div>
 
 			  <div class="form-group" >
-			  		<label  class="col-sm-3 control-label"> </label>
-				  <div  class="myFormBtn  col-sm-3" ng-click="addTransaction();$hide()"> Save </div>
+			  		<label  class="col-sm-5 control-label"> </label>
+				  <div  class="myFormBtn  col-sm-3" ng-click="addTask();$hide()"> Save </div>
 				  <label  class="col-sm-1 control-label"> </label>
 				  <div  class="myFormBtn col-sm-3" ng-click="$hide()"> Cancel </div>
 			  </div>
