@@ -1,7 +1,7 @@
 <div class="main_todo">
     <div class="todoContainer">
         <div class="checkbox">
-            <label><input styles="width: 5px;" type="checkbox" value=""></label>
+            <label><input styles="width: 5px;" type="checkbox" value="ctrl.checked" ng-click="ctrl.checked = !ctrl.checked; ctrl.showMyTasks()"></label>
             <span> Only my tasks</span>
         </div>
         <div class="inputArea">
@@ -10,14 +10,20 @@
         </div>
         <div class="panels">
             <div class="to-do" > To Do
-                 <div class="list" ng-repeat-start="todo in ctrl.taskService.todos" ng-if="false"></div>
+                 <div class="list" ng-repeat-start="todo in ctrl.todoTasks" ng-if="false"></div>
                     <todo-item></todo-item>
                  <div ng-repeat-end ng-if="false"></div>
             </div>
              <div class="in-progress"> In Progress
-                
+                <div class="list" ng-repeat-start="todo in ctrl.inProgressTasks" ng-if="false"></div>
+                    <todo-item></todo-item>
+                 <div ng-repeat-end ng-if="false"></div>
               </div>
-             <div class="done"> Done </div>
+             <div class="done"> Done 
+                    <div class="list" ng-repeat-start="todo in ctrl.doneTasks" ng-if="false"></div>
+                    <todo-item></todo-item>
+                 <div ng-repeat-end ng-if="false"></div>
+             </div>
         </div>
     </div>
 </div>

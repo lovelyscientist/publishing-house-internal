@@ -1,14 +1,7 @@
 'use strict';
 
-function UserView () {
+function UserView (appUser) {
         var $el = $('<div class="contextMenu"></div>');
-        var appUser = {
-            u_role: 'astronaut',
-            u_fullname: 'Vladyslav Sazonov',
-            u_twitter: 'nerop30',
-            u_agency: 'dnu'
-        };
-
 
         switch (appUser.u_role) {
             case 'astronaut':

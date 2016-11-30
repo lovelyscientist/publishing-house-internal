@@ -1,7 +1,7 @@
 function Dashboard($injector) {
     return {
         restrict: 'E',
-        templateUrl: 'js/transactions/addToShoppingList.html',
+        templateUrl: 'js/transactions/dashboardTemplate.html',
         controller: TaskController,
         controllerAs: 'ctrl',
         link($scope, element, attr, ctrl) {
