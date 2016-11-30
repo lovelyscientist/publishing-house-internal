@@ -22,9 +22,9 @@ function TaskService() {
 	];
 
 	this.todos = [
-      {id: 'RP-T-1', status: 'todo', assignee: 'Vladyslav Sazonov', name: 'Create love story for two of us', remaining: '1d', estimated: '5d', publication: 'Love story of two'},
-      {id: 'RP-T-2', status: 'todo', assignee: 'Anastasuz Cherkashenko', name: 'Make us go for a walk', remaining: '10d', estimated: '20d', publication: 'Lets go for a walk'},
-      {id: 'RP-T-3', status: 'done', assignee: 'Svitlana Tyshchenko', name: 'Is the best mom ever', remaining: '1d', estimated: '3d', publication: 'Hey, you are my best mom'}
+      {id: 'RP-T-1', desc: 'This is a special task', status: 'todo', assignee: 'Vladyslav Sazonov', name: 'Create love story for two of us', remaining: '1d', estimated: '5d', publication: 'Love story of two'},
+      {id: 'RP-T-2', desc: 'It should be done ASAP', status: 'todo', assignee: 'Anastasuz Cherkashenko', name: 'Make us go for a walk', remaining: '10d', estimated: '20d', publication: 'Lets go for a walk'},
+      {id: 'RP-T-3', desc: 'Please do the following steps..', status: 'done', assignee: 'Svitlana Tyshchenko', name: 'Is the best mom ever', remaining: '1d', estimated: '3d', publication: 'Hey, you are my best mom'}
     ];
 
     this.getTodos = function (filter) {
@@ -38,6 +38,7 @@ function TaskService() {
     	this.taskCounter++;
     	task.id = 'RP-T-' + this.taskCounter;
     	task.status = "todo";
+        task.desc = '';
     	this.todos.push(task);
     	return this.todos;
     }

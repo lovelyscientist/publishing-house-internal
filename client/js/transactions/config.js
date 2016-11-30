@@ -8,7 +8,8 @@ angular
 			})
 			.state('task', {
 		        url: '/tasks/:id',
-		        template: '<task-details></task-details>'
+		        template: '<task-details></task-details>',
+		        params : {data :null}
 		    })
 			.state('publications', {
 		      url: '/publications',

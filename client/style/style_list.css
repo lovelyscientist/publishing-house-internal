@@ -26,7 +26,7 @@
 	overflow-y: scroll;
 }
 .todo{
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Indie Flower';
 	width: 90%;
 	height: 200px;
 	border: 1px solid #443366;
@@ -38,7 +38,7 @@
     transition: opacity 0.4s ease-in-out;
 }
 .todoText{
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Indie Flower';
 	font-size: 22px;
 	text-align: left;
 }

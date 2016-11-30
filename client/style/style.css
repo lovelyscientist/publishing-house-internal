@@ -1,6 +1,24 @@
 body{
 	background-color: #ae3270;
 }
+.todo-details{
+	font-family: 'Indie Flower';
+    width: 90%;
+    height: 640px;
+    border: 1px solid #443366;
+    border-left: 4px solid #443366;
+    cursor: -webkit-grab;
+    margin: 20px auto 20px auto;
+    padding: 5px;
+    background-color: white;
+    transition: opacity 0.4s ease-in-out;
+}
+.task-details{
+	margin: 30px;
+	font-family: 'Indie Flower';
+	font-size: 22px;
+	text-align: left;
+}
 .task-id{
 	background-color: #443366;
 	color: white;
@@ -92,7 +110,7 @@ body{
 }
 span{
 	font-size: 22px;
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Indie Flower';
 	margin: 10px;
 	font-weight: 600;
 	color: white;
@@ -174,14 +192,14 @@ span{
 	margin-right: 5px;
 	padding-right: 5px;
 	display: inline-block;
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Indie Flower';
 	font-size: 20px;
 }
 
 .form-horizontal input, p, label, select, h1, h2, h3, h4{
 	font-size: 20px;
 	font-weight: 400;
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Indie Flower';
 	text-align: left;
 }
 
@@ -212,7 +230,7 @@ span{
     text-align: center;
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Indie Flower';
     border-radius: 5px;
     height: 40px;
     padding-top: 6px;

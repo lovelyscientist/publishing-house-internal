@@ -1,5 +1,26 @@
-<div class="main_todo">
-    <div class="todoContainer">
-       This is for task view
+<div class="todo-details">
+ 	<div class="task-details" ng-show="ctrl.noTasks"> Sorry, this task was not found =( </div>
+    <div class="task-details" ng-hide="ctrl.noTasks">	
+ 
+	<div type="button" class="btn btn-primary myFormBtn" ng-click=""> Edit </button></div>
+ 	<div type="button" class="btn btn-primary myFormBtn" ng-click=""> Log work </button></div>
+ 	<div type="button" class="btn btn-primary myFormBtn" ng-click=""> To Do </button></div>
+ 	<div type="button" style="width: 130px;" class="btn btn-primary myFormBtn" ng-click=""> In Progress </button></div>
+ 	<div type="button" class="btn btn-primary myFormBtn" ng-click=""> Done </button></div>
+ 	<hr>
+ 	<br><br>
+    	 Task Id: <span class="task-id">{{ctrl.taskDetails.id}}</span><br>
+    	 <br>
+		Assignee:</span> <span style="color: black; margin: 10px; padding: 0;" class="task-assignee"><u>{{ctrl.taskDetails.assignee}}</u></span> <br><br>
+		Status: <span style="color: darkgreen; margin: 10px; padding: 0;" class="task-assignee">{{ctrl.taskDetails.status}}</span> <br><br>
+		Task title:</span> <span  style="color: black; margin: 10px; padding: 0;" class="task-name">{{ctrl.taskDetails.name}}</span> <br><br>
+		Publication :</span> <span  style="color: black; margin: 10px; padding: 0;"  class="task-pub">{{ctrl.taskDetails.publication}} </span> <br><br>
+		Remaining:</span> {{ctrl.taskDetails.remaining}} <br><br>
+		Estimated:</span> {{ctrl.taskDetails.estimated}} <br><br>
+		<div class="form-group">
+		  <label for="comment">Description:</label>
+		  <textarea class="form-control" style="font-family: 'Indie Flower';
+	font-size: 18px;" rows="5" id="comment">{{ctrl.taskDetails.desc}}</textarea>
+		</div>
     </div>
 </div>
