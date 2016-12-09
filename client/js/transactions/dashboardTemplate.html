@@ -9,17 +9,17 @@
              <div style="display: inline-block;" type="button" class="btn btn-primary myFormBtn" ng-click="addItem(lastTodo)">Filter</button>
         </div>
         <div class="panels">
-            <div class="to-do" > To Do
+            <div class="to-do" > <div style="font-size: 20px;font-weight: 800;font-family: 'Indie Flower';">To Do </div>
                  <div class="list" ng-repeat-start="todo in ctrl.todoTasks" ng-if="false"></div>
                     <todo-item></todo-item>
                  <div ng-repeat-end ng-if="false"></div>
             </div>
-             <div class="in-progress"> In Progress
+             <div class="in-progress"> <div style="font-size: 20px;font-weight: 800;font-family: 'Indie Flower';">In Progress </div>
                 <div class="list" ng-repeat-start="todo in ctrl.inProgressTasks" ng-if="false"></div>
                     <todo-item></todo-item>
                  <div ng-repeat-end ng-if="false"></div>
               </div>
-             <div class="done"> Done 
+             <div class="done"> <div style="font-size: 20px;font-weight: 800;font-family: 'Indie Flower';"> Done </div>
                     <div class="list" ng-repeat-start="todo in ctrl.doneTasks" ng-if="false"></div>
                     <todo-item></todo-item>
                  <div ng-repeat-end ng-if="false"></div>

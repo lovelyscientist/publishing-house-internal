@@ -20,7 +20,7 @@ function TaskController ($scope, $modal, $ionicModal, taskService) {
       publication: ''
     };
 
-  $scope.addTask = function () {
+  $scope.saveTask = function () {
       this.taskService.addTask($scope.currentTask);
       this.tasks = this.taskService.getTodos();
      
@@ -34,6 +34,24 @@ function TaskController ($scope, $modal, $ionicModal, taskService) {
         remaining: '',
         assignee: '',
         publication: ''
+      };
+
+       $scope.currentPub = {
+        title: '',
+        author: '',
+        pages: 0,
+        genre: ''
+      };
+  }
+
+  $scope.savePub = function () {
+      this.taskService.addPub($scope.currentPub);
+    
+       $scope.currentPub = {
+        title: '',
+        author: '',
+        pages: 0,
+        genre: ''
       };
   }
 
@@ -52,11 +70,16 @@ function TaskController ($scope, $modal, $ionicModal, taskService) {
      
   };
 
-  $scope.addTask = $scope.addTask.bind(this);
+  $scope.saveTask = $scope.saveTask.bind(this);
 
-  var myModal = $modal({title: "Title", templateUrl: "js/transactions/addTransactionV2.html", placement: 'center', show: false, backdrop: 'static', controller: 'TaskController', $scope: $scope});
+  var myModalForNewTask = $modal({title: "Title", templateUrl: "js/transactions/addTask.html", placement: 'center', show: false, backdrop: 'static', controller: 'TaskController', $scope: $scope});
+  var myModalForNewPublication = $modal({title: "Title", templateUrl: "js/transactions/addPub.html", placement: 'center', show: false, backdrop: 'static', controller: 'TaskController', $scope: $scope});
 
-  $scope.showModal = function() {
-        myModal.show();
+  $scope.addTask = function() {
+        myModalForNewTask.show();
+  };
+
+  $scope.addPublication = function() {
+        myModalForNewPublication.show();
   };
 }

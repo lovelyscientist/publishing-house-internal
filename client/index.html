@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="js/bower_components/components-font-awesome/css/font-awesome.css">
 
         
-        <link href='js/bower_components/components-font-awesome/fonts/indie.woff2' rel='stylesheet' type='text/css'>
+        <!-- <link href='js/bower_components/components-font-awesome/fonts/indie.woff2' rel='stylesheet' type='text/css'> -->
         <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'> 
 
         <link rel="stylesheet" href="js/bower_components/ionic/css/ionic.min.css">
@@ -33,22 +33,19 @@
                 <div class="logo"></div><div class="logo-desc">Raspberry Publishing Inc.</div>
                   <div class="btn-group" role="group" aria-label="...">
                   <button type="button" class="btn btn-default super-buttons" ui-sref="dashboard"> Dashboards </button>
+                  <button type="button" class="btn btn-default super-buttons" ng-click="addPublication()"> New Publication </button>
+                  <button type="button" class="btn btn-default super-buttons" ng-click="addTask()"> New Task </button>
                   <div class="btn-group" role="group">
                     <button type="button" class="btn btn-default dropdown-toggle super-buttons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Tasks
+                      Find
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a href="#" class="super-buttons-not" ng-click="showModal()">Create task</a></li>
-                    </ul>
-                  </div>
-                  <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default dropdown-toggle super-buttons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Publications
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#" class="super-buttons-not" ng-click="showModal()">Create publication</a></li>
+                      <li><a href="#" class="super-buttons-not" ui-sref="authors"> Authors</a></li>
+                      <li><a href="#" class="super-buttons-not" ui-sref="staff"> Staff </a></li>
+                     <li><a href="#" class="super-buttons-not" ui-sref="publications"> Publications </a></li>
+                     <li><a href="#" class="super-buttons-not" ui-sref="tasks"> Tasks </a></li>
+                     <li><a href="#" class="super-buttons-not" ui-sref="chart"> Statistics </a></li>
                     </ul>
                   </div>
                   <button type="button" class="btn btn-default super-buttons">Meetings</button>
@@ -56,15 +53,18 @@
                 </div>
                 </div>
             </div>
-            <div class="main">  
+            <div class="main">
                <ui-view>
             </div>
         </div>
 
-    
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
         <script src="js/lib/underscore-1.8.3.js"></script> 
         <script src="js/bower_components/dragula.js/dist/dragula.js"></script>
         <script src="js/UserView.js"></script>
+        <script src="js/bower_components/moment/moment.js"></script>
         <script src="js/bower_components/angular/angular.js"></script>
         <script src="js/bower_components/angular-animate/angular-animate.js"></script>
         <script src="js/bower_components/angular-strap/dist/angular-strap.js"></script>
@@ -72,6 +72,7 @@
         <script src="js/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="js/transactions/transactionsService.js"></script>
         <script src="js/transactions/transactionsModule.js"></script>
+        <script src="js/transactions/gridDirective.js"></script>
         <script src="js/todos/todoController.js"></script>
         <script src="js/todos/todoDirective.js"></script>
         <script src="js/transactions/transactionsController.js"></script>

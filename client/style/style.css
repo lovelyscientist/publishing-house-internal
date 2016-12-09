@@ -243,6 +243,15 @@ span{
 	color:  #443366;
 	border: 3px solid  #443366;
 } 
+.disabled-class{
+	background-color: lightgrey !important;
+}
+.disabled-class:hover{
+	background-color: lightgrey;
+	color: white;
+	border: none;
+	cursor: default;
+}
 .form-horizontal input.ng-invalid {
     background-color:red;
 }
@@ -259,9 +268,8 @@ span{
     transition: .4s;
     height: 100%;
     text-align: center;
-    background-color: black;
+    background-color: #443366;
     width: 200px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,7 +281,7 @@ span{
     left: 0;
     z-index: 4;
     color: black;
-    background-color:  grey; 
+    background-color: #443366;
 }
 
 .contextMenu button {

@@ -3,10 +3,10 @@
     <div class="task-details" ng-hide="ctrl.noTasks">	
  
 	<div type="button" class="btn btn-primary myFormBtn" ng-click=""> Edit </button></div>
- 	<div type="button" class="btn btn-primary myFormBtn" ng-click=""> Log work </button></div>
- 	<div type="button" class="btn btn-primary myFormBtn" ng-click=""> To Do </button></div>
- 	<div type="button" style="width: 130px;" class="btn btn-primary myFormBtn" ng-click=""> In Progress </button></div>
- 	<div type="button" class="btn btn-primary myFormBtn" ng-click=""> Done </button></div>
+ 	<div type="button" class="btn btn-primary myFormBtn" ng-click="ctrl.logWork()"> Log work </button></div>
+ 	<div type="button" class="btn btn-primary myFormBtn" ng-click="ctrl.statusToDo()"> To Do </button></div>
+ 	<div type="button" style="width: 130px;" class="btn btn-primary myFormBtn" ng-click="ctrl.statusInProgress()"> In Progress </button></div>
+ 	<div type="button" class="btn btn-primary myFormBtn" ng-click="ctrl.statusDone()"> Done </button></div>
  	<hr>
  	<br><br>
     	 Task Id: <span class="task-id">{{ctrl.taskDetails.id}}</span><br>

@@ -1,0 +1,53 @@
+<ion-modal-view style="height: 50%; width: 30%; margin: auto; padding: 15px; font-size: 20px; font-weight: 500; border-radius: 10px;">
+	<div class="spacer"></div>
+	<div class="add-transaction-form">
+		 <form class="form-horizontal" name="addPubForm" style="margin-left: 10px;">
+		 		<h1>Add Publication</h1>
+				<h3>Fill in following fields:</h3>
+
+				<div class="form-group">
+			    <label class="col-sm-5 control-label "> Title *</label>
+			    <div class="col-sm-7">
+			      <input class="form-control" placeholder="Publication title" ng-model="currentPub.title" required name="amount"></input>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label class="col-sm-5 control-label "> Author * </label>
+			    <div class="col-sm-7">
+			      <input class="form-control" placeholder="Author full name" ng-model="currentPub.author" required name="amount"></input>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label class="col-sm-5 control-label ">Pages *</label>
+			    <div class="col-sm-5">
+			      <input class="form-control" placeholder="1" ng-model="currentPub.pages" type="number" min="1" max="2000" ng-minlength="{{1}}" required name="amount"></input>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label class="col-sm-5 control-label"  required name="type"> Genre *</label>
+			    <div class="col-sm-6">
+			      	 <select class="selectpicker" ng-model="currentPub.genre">
+			      	 	 <option>Children</option>
+			      	 	 <option>Drama</option>
+			      	 	 <option>Comedy</option>
+			      	 	 <option>Triller</option>
+			      	 	 <option>Horror</option>
+					 </select>
+			    </div>
+			  </div>
+		
+
+			  <div class="form-group" >
+			  		<label  class="col-sm-10 control-label"> </label>
+				  <div  ng-class="{'disabled-class': addPubForm.$invalid}" class="myFormBtn  col-sm-3" ng-disabled="addPubForm.$invalid" ng-click="!addPubForm.$invalid && $hide(); !addPubForm.$invalid && savePub(); "> Save </div>
+				  <label  class="col-sm-1 control-label"> </label>
+				  <div  class="myFormBtn col-sm-3" ng-click="$hide()"> Cancel </div>
+			  </div>
+
+			
+		</form>
+	</div>
+</ion-modal-view>

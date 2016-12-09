@@ -36,13 +36,10 @@ function UserView (appUser) {
 }
 
 var astroTpl = _.template([
-    '<button class="btn-edit" title="Edit profile"><i class="fa fa-cog fa-3x"></i></button>',
     '<div class="profile-container">', 
         '<div class="user-info">',
-        '<img style="width: 170px; height: 150px;margin-top: 20%;" class="photo" src="js/img/astronaut.png" alt="<% print(u_fullname) %>">',
-            '<p class="name"> </br> <%= u_fullname %> </br>',
-                '<p style="font-size: 15px;" class="role"><%= u_agency%> <%= u_role %></p> <hr>',
-                '<p style="font-size: 19px;"class="role"><%= u_twitter%></p>',
+        '<img style="width: 170px; height: 150px;margin-top: 10%; background: white;" class="photo">',
+            '<p class="name" style="color: white;"> </br> <%= name %> </br>',
         '</div>',
     '</div>'
 ].join(''));
