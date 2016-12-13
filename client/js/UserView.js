@@ -2,17 +2,7 @@
 
 function UserView (appUser) {
         var $el = $('<div class="contextMenu"></div>');
-
-        switch (appUser.u_role) {
-            case 'astronaut':
-            var template = astroTpl;
-            break;
-            case 'administrator':
-            var template = adminTpl;
-            break
-            default:
-            var template = watcherTpl;
-        }
+        var template = astroTpl;
         
         this.render = function () {
             $el.empty();
@@ -38,8 +28,13 @@ function UserView (appUser) {
 var astroTpl = _.template([
     '<div class="profile-container">', 
         '<div class="user-info">',
-        '<img style="width: 170px; height: 150px;margin-top: 10%; background: white;" class="photo">',
-            '<p class="name" style="color: white;"> </br> <%= name %> </br>',
+        '<p class="name" style="color: white;"> </br> <%= shortName %> , </br>  number of issues for you is   <span class="circ">  10 </span </p>',
+        '<p class="name" style="color: white; cursor: pointer;"> </br> <u> View my issues </u> </br>',
+        '<img style="width: 170px; height: 150px;margin-top: 10%;" class="photo-user">',
+        '<p class="name" style="color: white;"> </br> <b ><%= name %> <b> </br>',
+        '<p class="name" style="color: white;"> </br> <b ><%= role %> <b> </br>',
+        '<p class="name" style="color: white;"> </br> <%= birthdate %> </br>',
+        '<p class="name" style="color: white; font-weight: 300; "> </br> <%= email %> </br>',
         '</div>',
     '</div>'
 ].join(''));

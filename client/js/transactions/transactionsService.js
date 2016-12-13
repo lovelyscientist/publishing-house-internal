@@ -1,11 +1,11 @@
 function TaskService() {
 	this.currentUser = {
-        role: 'astronaut',
+        role: 'Editor',
         name: 'Vladyslav Sazonov',
-        u_twitter: 'nerop30',
-        u_agency: 'dnu',
-        u_fullname: 'Vladyslav',
-        u_role: 'astronaut'
+        shortName: 'Vladyslav',
+        currentTasksNum: '10',
+        birthdate: '1996-12-16',
+        email: 'vladsaz@gmail.com'
     };
 
 	this.taskCounter = 3;
